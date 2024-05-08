@@ -1,15 +1,17 @@
 CARS
 
-id - SMALLINT - PRIMARY KEY - AUTO_INCREMENT - UNIQUE - NOTNULL
-vin_number - VARCHAR(17) - UNIQUE - NOTNULL - INDEX
-number_plate VARCHAR(10) - UNIQUE - NULL - DEFAULT('NEW')
-brand - VARCHAR(25) - NOTNULL
-model - VARCHAR(25) - NOTNULL
-fuel_type - VARCHAR(10) - NOTNULL
-year - YEAR - NOTNULL
-mileage - MEDIUMINT - NULL - DEFAULT ('KM 0')
+id - INT - PRIMARY KEY - AUTO_INCREMENT - UNIQUE - NOTNULL
+vin_number - VARCHAR(50) - UNIQUE - NOTNULL 
+number_plate VARCHAR(20) - UNIQUE - NULL - DEFAULT('NEW')
+brand - VARCHAR(50) - NOTNULL - INDEX
+model - VARCHAR(50) - NOTNULL - INDEX
+fuel_type - VARCHAR(20) - NOTNULL
+year - YEAR - NOTNULL - INDEX
+mileage - MEDIUMINT - NOTNULL - DEFAULT ('KM 0')
 color - VARCHAR(20) - NOTNULL
-nr_of_doors - VARCHAR(1) - NOTNULL
-euro_standard - VARCHAR(7) - NULL
+nr_of_doors - TINYINT - NOTNULL
+seats - TINYINT - NOTNULL
+euro_standard - VARCHAR(15) - NULL
 description - TEXT - NULL
-price - MEDIUMINT - NULL
+price - DECIMAL(9, 2) - NULL
+is_avaible - TINYINT
